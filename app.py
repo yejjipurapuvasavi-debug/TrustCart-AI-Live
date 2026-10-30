@@ -47,7 +47,7 @@ st.caption(f"Validated records: {len(products):,} products · {len(policy)} poli
 st.session_state.setdefault("messages", [])
 st.session_state.setdefault("history", [])
 
-    for message in st.session_state.messages:
+for message in st.session_state.messages:
     avatar = "🛒" if message["role"] == "assistant" else "user"
     with st.chat_message(message["role"], avatar=avatar):
         st.markdown(message["text"])
