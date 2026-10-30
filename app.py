@@ -59,8 +59,8 @@ if prompt:
     st.session_state.messages.append({"role": "user", "text": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
-     with st.chat_message("assistant", avatar="🛒"):
-        with st.spinner("Checking catalogue evidence…"):
+        with st.chat_message("assistant", avatar="🛒"):
+            with st.spinner("Checking catalogue evidence…"):
             answer = answer_query(
                 prompt,
                 st.session_state.history,
