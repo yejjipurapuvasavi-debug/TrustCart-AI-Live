@@ -61,13 +61,13 @@ if prompt:
         st.markdown(prompt)
         with st.chat_message("assistant", avatar="🛒"):
             with st.spinner("Checking catalogue evidence…"):
-            answer = answer_query(
+                answer = answer_query(
                 prompt,
                 st.session_state.history,
                 products,
                 index,
                 policy
-            )
+              )
 
         answer_text = (answer.answer_text or "").strip()
 
